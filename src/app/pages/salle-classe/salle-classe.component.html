@@ -1,0 +1,102 @@
+
+<div class="card">
+  <p-toolbar>
+    <div class="ui-toolbar-group-left">
+
+    </div>
+
+    <div class="ui-toolbar-group-right">
+      <button pButton type="button" label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
+    </div>
+  </p-toolbar>
+
+
+  <p-table #dt [rows]="10" [paginator]="true"  responsiveLayout="scroll">
+    <ng-template pTemplate="caption">
+      <div class="flex align-items-center justify-content-between">
+        <h5 class="m-0">Gestion des salles de classe</h5>
+        <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" placeholder="Search..." />
+          </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="code">Code<p-sortIcon field="id"></p-sortIcon></th>
+        <th pSortableColumn="libelleClasse">Classe<p-sortIcon field="libelleClasse"></p-sortIcon></th>
+        <th>actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><p-rating></p-rating></td>
+        <td><span></span></td>
+        <td>
+          <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" ></button>
+          <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"></button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div class="flex align-items-center justify-content-between">
+        In total there are  classes.
+      </div>
+    </ng-template>
+  </p-table>
+</div>
+<p-dialog [(visible)]="salleDialog" [style]="{width:'450px'}" header="Details classes" [modal]="true" styleClass="p-fluid">
+  <ng-template pTemplate="content">
+    <div class="field">
+      <label for="libelleClasse">Classe</label>
+      <input type="text" pInputText  id="libelleClasse" [(ngModel)]="salleclasse.libelleClasse" required autofocus/>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" ></button>
+    <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text"></button>
+  </ng-template>
+
+</p-dialog>
+
+<!--
+
+<div class="card">
+ <div class="card-header">
+   <h5 class="text-black"> Gestion des matieres</h5>
+ </div>&nbsp;
+
+  <div class="btn-toolbar"  role="toolbar">
+      <button type="button" style="margin-left:20px" class="btn btn-primary">Nouveau</button>
+  </div>
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead style="background-color:#e3f2fd;">
+          <tr>
+            <th class="col-1" style="text-align: center">Code</th>
+            <th class="col-5" style="text-align: center">Matiere</th>
+            <th class="col-3" style="text-align: center">Volume horaire</th>
+            <th class="col-3" style="text-align: center">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+-->
+

@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+.navbar {
+  .elem.active,
+  .elem.active:focus,
+  .elem.active:hover {
+    background-color:#c2c3c4;
+  }
+  ul.navbar-nav {
+    .nav-item {
+
+    }
+  }
+
+
+
+  a.nav-link {
+    font-weight: 400;
+  }
+}

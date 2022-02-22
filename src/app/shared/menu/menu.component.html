@@ -1,0 +1,87 @@
+<nav  class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <a  class="navbar-brand"  href="#">Gestion des ET</a>
+  <div  class="collapse navbar-collapse"  id="navbarSupportedContent">
+
+    <ul  class="navbar-nav mr-auto">
+      <li  class="nav-item  pointer elem" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+
+        <a  class="nav-link"  routerLink="/">
+          Accueil
+          <span  class="sr-only"></span>
+        </a>
+      </li>
+
+      <li  class="nav-item  pointer elem dropdown" routerLinkActive="active" ngbDropdown>
+        <a  class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);"
+            id="parametre">
+          Parametre
+          <span  class="sr-only"></span>
+        </a>
+        <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
+          <li>
+            <a class="dropdown-item">
+              <a  class="nav-link"  routerLink="salle-classe">
+                Salle/Classe
+                <span  class="sr-only"></span>
+              </a>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item">
+              <a  class="nav-link"  routerLink="matiere">
+                Matiere
+                <span  class="sr-only"></span>
+              </a>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item">
+              <a  class="nav-link"  routerLink="professeur">
+                Professeur
+                <span  class="sr-only"></span>
+              </a>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!--
+            <li  class="nav-item pointer elem" routerLinkActive="active">
+              <a  class="nav-link"  routerLink="salle-classe">
+                Salle/Classe
+                <span  class="sr-only"></span>
+              </a>
+            </li>
+            <li  class="nav-item pointer elem" routerLinkActive="active">
+              <a  class="nav-link"  routerLink="matiere">
+                Matiere
+                <span  class="sr-only"></span>
+              </a>
+            </li>
+            <li  class="nav-item pointer elem" routerLinkActive="active">
+              <a  class="nav-link"  routerLink="professeur">
+                Professeur
+                <span  class="sr-only"></span>
+              </a>
+            </li>-->
+      <li  class="nav-item pointer elem" routerLinkActive="active">
+        <a  class="nav-link"  routerLink="#">
+          Programmation<span  class="sr-only"></span>
+        </a>
+      </li>
+      <li  class="nav-item pointer elem" routerLinkActive="active">
+        <a  class="nav-link"  routerLink="#">
+          Etat<span  class="sr-only"></span>
+        </a>
+      </li>
+
+      <li  class="nav-item pointer elem " routerLinkActive="active">
+        <a  class="nav-link"  routerLink="#">
+          <a class="fa-pull-right"></a>
+          Deconnexion<span  class="sr-only"></span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
